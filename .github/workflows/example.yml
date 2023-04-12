@@ -1,0 +1,24 @@
+name: Example workflow
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  example:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Typst
+        uses: yusancky/setup-typst@v0.2
+        with:
+          version: 'v0.2.0'
+      - name: Compile Typst file
+        run: typst compile file.typ
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: file.pdf
+          path: file.pdf
+          if-no-files-found: error
