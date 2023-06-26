@@ -1,7 +1,6 @@
 name: Example workflow
 
 on:
-  push:
   workflow_dispatch:
 
 jobs:
