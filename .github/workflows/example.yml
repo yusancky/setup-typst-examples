@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Typst
-        uses: yusancky/setup-typst@v0.1
+        uses: yusancky/setup-typst@issue-8
         with:
           version: 'v0.2.0'
       - name: Compile Typst file
