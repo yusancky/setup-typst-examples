@@ -15,7 +15,7 @@ jobs:
           version: 'v0.2.0'
       - run: |
           cd c:\\typst
-          tree .
+          tree . -F
           echo $GITHUB_PATH
       - name: Compile Typst file
         run: typst compile file.typ
