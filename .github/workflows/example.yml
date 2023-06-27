@@ -13,6 +13,10 @@ jobs:
         uses: yusancky/setup-typst@issue-8
         with:
           version: 'v0.2.0'
+      - run: |
+          cd c:\\typst
+          tree .
+          echo $GITHUB_PATH
       - name: Compile Typst file
         run: typst compile file.typ
       - name: Upload a Build Artifact
