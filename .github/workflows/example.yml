@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Typst
-        uses: yusancky/setup-typst@issue-8-1
+        uses: mintyfrankie/setup-typst@main
         with:
           version: ${{ matrix.version }}
       - name: Compile Typst file
